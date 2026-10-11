@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>JS Exercise 04 - Dynamic List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Watchlist</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="list-container">
-        <h1>Watchlist</h1>
-        <ul id="watchlist"></ul>
+    <div class="watchlist-container">
+        <h1>WATCHLIST</h1>
+        
+        <!-- أدوات الإدخال -->
+        <div class="input-group">
+            <input type="text" id="anime-input" placeholder="Add new title...">
+            <button id="add-btn">Add</button>
+        </div>
+
+        <!-- القائمة التي سيتم تعديلها برمجياً -->
+        <ul id="anime-list"></ul>
     </div>
 </body>
 </html>

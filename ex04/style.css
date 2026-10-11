@@ -9,42 +9,94 @@ body {
     margin: 0;
 }
 
-.list-container {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-    padding: 30px;
+.watchlist-container {
+    background: rgba(30, 30, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
     border-radius: 12px;
-    width: 350px;
+    width: 400px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
     text-align: center;
-    border-bottom: 2px solid #5e35b1; /* خط بنفسجي داكن للعنوان */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+button {
+    padding: 12px 20px;
+    background: #6200ea; /* لون بنفسجي متناسق مع تصميمك السابق */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #7c4dff;
 }
 
 ul {
-    list-style-type: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 li {
-    background-color: #2a2a2a;
-    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e1e;
+    margin-bottom: 10px;
     padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #5e35b1;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    border-left: 4px solid #6200ea;
+    transition: 0.3s;
 }
 
-li:hover {
-    transform: translateX(10px); 
-    background-color: #333;
-    border-left-color: #8e24aa;
+.item-text {
+    cursor: pointer;
+    flex: 1;
+}
+
+/* التنسيق الذي سيُطبق عند شطب العنصر */
+.completed .item-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.completed {
+    border-left: 4px solid #555;
+    opacity: 0.7;
+}
+
+.delete-btn {
+    background: #cf6679; /* لون أحمر هادئ لزر الحذف */
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background: #ff7597;
 }
